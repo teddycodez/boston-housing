@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Boston House Price Prediction</title>
+  <meta charset="unicode-8">
+
+  <link rel="stylesheet" href="/assets/css/index.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+</head>
+<body>
+  <div class="bg-image"></div>
+  <div class="container">
+    <h1>Boston Housing Pridiction</h1>
+    {% if result %}
+    The Prediction by the model is {{ prediction }}
+    {% endif %}
+  </div>
+  <div class="container">
+    <form method="POST" action="/">
+      {% csrf_token %}
+      <label  for="CRIM">Crime Rate:</label>
+      
+      <input type="number" id="CRIM" name="CRIM" step="0.01" required><br><br>
+      
+      <label for="ZN">Proportion of Residential Land (>25000 sq. ft.):</label>
+      <input type="number" d="ZN" name="ZN" step="0.01" required><br><br>
+      
+      <label for="INDUS">Proportion of Non-Retail Business Acres per Town:</label>
+      <input type="number" id="INDUS" name="INDUS" step="0.01" required><br><br>
+      
+      <label  for="CHAS">Boundaries with Charles River:</label>
+      <input type="number" id="CHAS" name="CHAS" step="0.01" required><br><br>
+      <br><br>
+      
+      <label for="NOX">Nitric Oxide Concentration:</label>
+      <input  type="number" id="NOX" name="NOX" step="0.01" required><br><br>
+      
+      <label for="RM">Average Number of Rooms per Dwelling:</label>
+      <input type="number" id="RM" name="RM" step="0.01" required><br><br>
+      
+      <label for="AGE">Proportion of Owner-Occupied Units Built Prior to 1940:</label>
+      <input type="number" id="AGE" name="AGE" step="0.01" required><br><br>
+
+      <label for="DIS">Weighted distances to five Boston employmment centres:</label>
+      <input type="number" id="DIS" name="DIS" step="10" required><br><br>
+
+      <label for="RAD">RAD:</label>
+      <input type="number" id="RAD" name="RAD" step="0.01" required><br><br>
+
+      <label for="TAX">Full-value property tax rate perr $10,000:</label>
+      <input type="number" id="TAX" name="TAX" step="0.1" required><br><br>
+
+      <label for="B">No. of Black people reside:</label>
+      <input type="number" id="B" name="B" step="0.1" required><br><br>
+
+      <label for="PTRATIO">Pupil teacher ratio by Town:</label>
+      <input type="number" id="PTRATIO" name="PTRATIO" step="0.01" required><br><br>
+
+      <label for="LSTAT">Percent of lower status population:</label>
+      <input type="number" id="LSTAT" name="LSTAT" step="1" required><br><br>
+
+      <input class="btn" type="submit" value="Predict">
+    </div> 
+    </form>
+  </div>
+</body>
+</html>

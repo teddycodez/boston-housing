@@ -1,0 +1,28 @@
+body{
+    background-color: darkgray;
+    background-image: url(17545.jpg);
+    background-size: cover;
+}
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .text-animation {
+    animation-name: fadeIn;
+    padding-top: 50%;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    width: 100%;
+    opacity: 0;
+    font-size: 90px;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
